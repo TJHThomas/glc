@@ -1,0 +1,24 @@
+<l-popup show="{{!isBinding}}" locked="{{true}}" content-align="bottom">
+  <view class="popup_tip">
+    <l-button shape="square" plain width="260" height="80" bind:lintap="goBinding">立即绑定教务系统</l-button>
+  </view>
+</l-popup>
+<view class="wrapper" style="{{isCourseSelected?'background-color: rgb(245, 245, 245);':''}}">
+  <block wx:for="{{courseMessage}}" wx:key="index">
+    <l-list title="{{item.title}}" bind:tap="{{isCourseSelected?'':'handlerClick'}}" bind:longpress="handlerLongPress"  bind:touchend="handlerTouchEnd" data-title="{{item.title}}" data-index="{{index}}" is-link="{{false}}" l-class="wrapper-list">
+      <view slot="right-section">
+        <image class="wrapper-list-image" data-title="{{item.title}}" data-index="{{index}}" src="{{item.isSelected?'/assets/icons/radio_selected.png':'/assets/icons/radio.png'}}"/>
+      </view>
+    </l-list>
+  </block>
+  <view class="wrapper_b" wx:if="{{!showButton}}">
+    <view class="wrapper_b_btn" wx:if="{{!isCourseSelected}}" bind:tap="confireCourse">确定选课</view>
+  </view>
+  <view class="wrapper_detail" wx:if="{{detailShow}}" style="top:{{detail_top}}px;left:{{detail_left}}px">
+    <view>教师名称：{{courseDetail.teacherName}}</view>
+    <view>节数：{{courseDetail.pictch}}</view>
+    <view>地点：{{courseDetail.place}}</view>
+    <view>学分：{{courseDetail.credit}}</view>
+    <view>人数：{{courseDetail.number}}</view>
+  </view>
+</view>

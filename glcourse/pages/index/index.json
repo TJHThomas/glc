@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-capsule-bar":"/miniprogram_npm/lin-ui/capsule-bar/index",
+    "l-mask":"/miniprogram_npm/lin-ui/mask/index",
+    "l-countdown":"/miniprogram_npm/lin-ui/countdown/index",
+    "in-curricula-var":"/components/in-curricula-var/index"
+  }
+}

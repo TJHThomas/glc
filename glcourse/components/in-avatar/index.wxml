@@ -1,0 +1,7 @@
+<view class="wrapper_avatar">
+  <l-avatar size="120" shape="square" open-data="{{['userAvatarUrl','userNickName']}}" />
+
+  <image class="wrapper_avatar_binding_status" src="../../assets/icons/unbound.png" bind:tap="goBinding" wx-if="{{!isBinding}}"></image>
+  <image class="wrapper_avatar_binding_status" src="../../assets/icons/binding.png" wx-if="{{isBinding}}"></image>
+  
+</view>

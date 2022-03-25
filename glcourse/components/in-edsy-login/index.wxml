@@ -1,0 +1,11 @@
+<l-capsule-bar title="登录" home-page="/pages/index/index">
+  <view class="wrapper">
+    <view class="wrapper_input">
+      <l-input label="学号" type="number" focus="{{true}}" placeholder="请输入学号" clear="{{true}}"  required="{{true}}" rules="{{snoRule}}" tip-type="text" bind:linvalidate="checkNumber"/>
+      <l-input label="密码" type="password" placeholder="请输入密码" clear="{{true}}"  required="{{true}}" rules="{{pwdRule}}" tip-type="text" bind:linvalidate="checkPassword"/>
+    </view>
+    <view class="wrapper_btn">
+      <l-button size="large" shape="square" bind:lintap="handlerLogin">立即登录</l-button>
+    </view>
+  </view>
+</l-capsule-bar>

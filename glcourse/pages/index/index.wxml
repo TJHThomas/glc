@@ -1,0 +1,8 @@
+<l-capsule-bar hidden-capsule title="选课">
+  <in-curricula-var courseMessage="{{courseMessage}}" isBinding="{{isBinding}}" />
+  <view class="wrapper_mask" wx:if="{{!startSelectCourse && isBinding}}">
+    <l-mask show="{{!startSelectCourse}}"> </l-mask>
+    <l-countdown class="wrapper_mask_countdown" bind:linend="hanlderLinend"
+    time="2022-2-18 14:49"/>
+  </view>
+</l-capsule-bar>

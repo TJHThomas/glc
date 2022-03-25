@@ -1,0 +1,9 @@
+.wrapper_mask{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper_mask_countdown{
+  z-index: 9999;
+}

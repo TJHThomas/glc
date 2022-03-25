@@ -1,0 +1,14 @@
+.wrapper_avatar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding:20rpx;
+  border-radius: 2%;
+}
+.wrapper_avatar_binding_status{
+  width: 60rpx;
+  height: 60rpx;
+  padding-right: 20rpx;
+}

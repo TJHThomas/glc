@@ -1,0 +1,63 @@
+
+<l-capsule-bar hidden-capsule title="个人中心">
+  <l-notice-bar front-icon-name="notification" wx:if="{{!isBinding}}" show="{{true}}"  close="{{true}}" l-class="notice" front-icon-color="#8a6d3b" end-icon-color="#8a6d3b">您还没有绑定教务系统，立即绑定享受全部功能</l-notice-bar>
+  
+  <view class="wrapper">
+    <in-avatar isBinding="{{isBinding}}" />
+
+    <view class="wrapper_items">
+      <view class="wrapper_items_item">
+        <l-list wx:if="{{isBinding}}" bind:tap="goPrevious" title="往届课程"/>
+        <l-list wx:if="{{!isBinding}}" bind:tap="goLoginEadSysytem" title="绑定教务系统"/>
+      </view>
+      
+      <view class="wrapper_items_item">
+        <l-list title="版本号" right-desc="v1.0.0" l-right-class="wrapper_item_ridesc" is-link="{{false}}" />
+        <l-list title="更多记录" bind:lintap="handlerShowVersion" />
+        <l-popup show="{{showPopupVersion}}">
+          <view class="wrapper_popup">
+            <l-collapse type="accordion">
+              <l-collapse-item title="v1.0.0">
+                [选课小程序]首个版本发布，主要功能是选课
+              </l-collapse-item>
+              <l-collapse-item title="v1.0.1">
+                修复了部分bug
+              </l-collapse-item>
+            </l-collapse>
+          </view>
+        </l-popup>
+      </view>
+
+      <view class="wrapper_items_item">
+        <l-list title="关于我们" bind:tap="handlerShowOur" />
+        <l-popup show="{{showPopupOur}}">
+          <view class="wrapper_popup">
+            <view class="wrapper_popup_title">关于我们</view>
+            <view class="wrapper_popup_hr"></view>
+            <view class="wrapper_popup_descript">
+              <view>In团队成立于2021年5月，由于刚成立不久，很多内容还在不断维护和更新中，如果你有好的内容、Idea分享，欢迎联系我投稿，备注清楚，建议微信沟通！</view>
+              <view>个人微信：xxxxxxxxxxx（小IN）</view>
+              <view>内容更新第一时间会推送下面的公众号，欢迎关注！</view>
+              <view class="wrapper_popup_image">
+                <image class="wrapper_image" src="../../assets/icons/baidu.png"></image>
+              </view>
+            </view>
+          </view>
+        </l-popup>
+      </view>
+
+      <button class="kf_button" style="transform:translate({{contact_X}}px,{{contact_Y}}px)" open-type="contact" session-from="weapp" size="mini">
+        <view class="di_text" style="animation: {{animation}};">{{di_text}}</view>
+        <image class="kf_image" bind:touchstart="handlerContactStart" bind:touchmove="handlerContactMove" bind:touchend="handlerContactEnd" src="../../assets/icons/course_service.png" />
+      </button>
+
+      <view class="wrapper_items_item" wx:if="{{isBinding}}"
+      bind:tap="handlerNotBinding">
+        <l-list title="解除绑定" />
+      </view>
+    </view>
+  </view>
+</l-capsule-bar>
+
+
+

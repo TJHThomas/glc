@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "l-capsule-bar":"/miniprogram_npm/lin-ui/capsule-bar/index",
+    "l-input":"/miniprogram_npm/lin-ui/input/index",
+    "l-button":"/miniprogram_npm/lin-ui/button/index"
+  }
+}

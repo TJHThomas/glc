@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "l-capsule-bar":"/miniprogram_npm/lin-ui/capsule-bar/index",
+    "in-curricula-var":"/components/in-curricula-var/index"
+  }
+}

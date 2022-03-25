@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/previous/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/icons/course.png",
+        "selectedIconPath": "assets/icons/course_selected.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "assets/icons/user.png",
+        "selectedIconPath": "assets/icons/user_selected.png"
+      }
+    ],
+    "backgroundColor": "#f8f8f8",
+    "borderStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

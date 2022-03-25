@@ -1,0 +1,3 @@
+<l-capsule-bar title="往届课程">
+  <in-curricula-var courseMessage="{{courseMessage}}" showButton="{{false}}" isBinding="{{false}}"/>
+</l-capsule-bar>
