@@ -1,7 +1,6 @@
 const Router = require('@koa/router')
 const mongoose = require('mongoose')
 const { v4: uuidv4 } = require('uuid')
-// const { getBody } = require('../../helpers/utils')
 
 const InviteCode = mongoose.model('InviteCode');
 

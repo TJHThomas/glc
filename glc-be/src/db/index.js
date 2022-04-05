@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 // 直接执行这个文件
 require('./Schemas/User')
 require('./Schemas/InviteCode')
+require('./Schemas/Course')
+require('./Schemas/CourseEditLog')
 
 const connect = () => {
   return new Promise((resolve) => {
